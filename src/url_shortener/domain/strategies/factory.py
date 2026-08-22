@@ -1,9 +1,9 @@
-from src.url_shortener.domain.strategies.base import base_strategy
-from src.url_shortener.domain.strategies.hashStrategy import hash_strategy
-from src.url_shortener.domain.strategies.randomStrategy import random_strategy
-from src.url_shortener.domain.strategies.uuidStrategy import uuid_strategy
+from url_shortener.domain.strategies.base import base_strategy
+from url_shortener.domain.strategies.hashStrategy import hash_strategy
+from url_shortener.domain.strategies.randomStrategy import random_strategy
+from url_shortener.domain.strategies.uuidStrategy import uuid_strategy
 
-from src.url_shortener.core.config import settings
+from url_shortener.core.config import settings
 
 STRATEGIES = {
     "random": lambda: random_strategy(length=settings.SHORTCODE_LENGTH),
