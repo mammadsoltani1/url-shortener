@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class ShortURL:
+class short_url:
     """Domain entity representing a shortened URL, independent of any
     persistence or web framework concern."""
 
