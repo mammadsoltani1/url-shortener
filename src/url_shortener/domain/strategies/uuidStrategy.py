@@ -1,5 +1,5 @@
 import uuid
-from src.url_shortener.domain.strategies.base import base_strategy
+from url_shortener.domain.strategies.base import base_strategy
 
 class uuid_strategy(base_strategy):
     """UUID strategy for generating short codes."""
