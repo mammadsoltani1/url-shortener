@@ -1,5 +1,5 @@
 import hashlib
-from src.url_shortener.domain.strategies.base import base_strategy
+from url_shortener.domain.strategies.base import base_strategy
 
 alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
