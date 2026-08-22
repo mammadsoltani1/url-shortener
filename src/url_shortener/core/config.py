@@ -13,4 +13,4 @@ class Settings(BaseSettings):
     # App
     BASE_URL: str = "http://localhost:8000"
 
-settings = Settings
+settings = Settings()
