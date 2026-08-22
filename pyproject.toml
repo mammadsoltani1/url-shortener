@@ -1,13 +1,19 @@
 [project]
 name = "url-shortener"
 version = "0.1.0"
-description = "Add your description here"
+description = "A Dockerized FastAPI URL Shortener with pluggable short-code strategies"
 readme = "README.md"
 authors = [
     { name = "mammadsoltani1" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.115",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "pydantic-settings>=2.4",
+    "alembic>=1.13",
+]
 
 [project.scripts]
 url-shortener = "url_shortener:main"
