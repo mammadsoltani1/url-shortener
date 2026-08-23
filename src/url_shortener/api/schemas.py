@@ -17,4 +17,5 @@ class shorten_url_req(BaseModel):
 class shorten_url_res(BaseModel):
     """Schema for the response body after shortening a URL."""
     short_code: str
+    short_url: str
     original_url: str
