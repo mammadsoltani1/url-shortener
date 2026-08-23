@@ -2,7 +2,29 @@
 
 A FastAPI service that shortens long URLs and redirects short codes back to the original destination. Short code generation is pluggable (random, hash, or uuid based).
 
-## Requirements
+## Running with Docker
+
+The simplest way to run the whole stack (app + PostgreSQL):
+
+```bash
+docker compose up -d
+```
+
+This builds the app image, starts PostgreSQL, applies migrations automatically, and starts the API. Once it's up:
+
+- `http://localhost:8000/` - simple web frontend
+- `http://localhost:8000/docs` - interactive API docs
+- `http://localhost:8000/health` - health check
+
+Other useful commands:
+
+```bash
+docker compose logs -f app     # follow app logs
+docker compose down            # stop and remove containers
+docker compose up -d --build   # rebuild the image after changing code/deps
+```
+
+## Requirements (running without Docker)
 
 - Python 3.11+
 - [uv](https://docs.astral.sh/uv/)
@@ -49,6 +71,7 @@ Set these in `.env`:
 
 ## API
 
+- `GET /` - simple web frontend for trying out the service
 - `POST /shorten` - shorten a URL. Body: `{"original_url": "https://example.com/some/path"}`
 - `GET /{short_code}` - redirect to the original URL
 - `GET /health` - health check
